@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDDT", "BaseDDT\BaseDDT.csproj", "{E6D7AFCC-7ABD-4514-A032-05802A93EEFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6D7AFCC-7ABD-4514-A032-05802A93EEFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D7AFCC-7ABD-4514-A032-05802A93EEFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6D7AFCC-7ABD-4514-A032-05802A93EEFC}.Debug|x86.ActiveCfg = Debug|x86
+		{E6D7AFCC-7ABD-4514-A032-05802A93EEFC}.Debug|x86.Build.0 = Debug|x86
+		{E6D7AFCC-7ABD-4514-A032-05802A93EEFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6D7AFCC-7ABD-4514-A032-05802A93EEFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6D7AFCC-7ABD-4514-A032-05802A93EEFC}.Release|x86.ActiveCfg = Release|x86
+		{E6D7AFCC-7ABD-4514-A032-05802A93EEFC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {593126A5-B308-4AAD-8D73-E0A0825C9EA8}
+	EndGlobalSection
+EndGlobal
