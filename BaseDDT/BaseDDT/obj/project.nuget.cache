@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6fAbZN0nFQupWBDeB6EH8qUYLWMDgtSKVTscVhAuPzVsgGyHNW4eSHVPfTEz3RBsfKGMIeAFdYc1h1jAi7/fsA==",
+  "dgSpecHash": "iB8zfc4e8gRzVUAwNOHv9Wkol+c83UNsbGaTUGjQj95B1hJCJZlqFIqCkq/y2vE2oQY5ISnbVMaFl+BNfAOhdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\esto0\\source\\repos\\BaseDDT\\BaseDDT\\BaseDDT.csproj",
+  "projectFilePath": "C:\\Users\\esto0\\Documents\\BDSt\\BaseDDT\\BaseDDT\\BaseDDT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\esto0\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\esto0\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

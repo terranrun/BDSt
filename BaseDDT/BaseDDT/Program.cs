@@ -43,53 +43,107 @@ namespace BaseDDT
                 }
                 #endregion
 
+                if (command.ToLower().Equals("clear"))
+                    {
+                        Console.Clear();
+                        continue;
+                    }
+
                 SqlCommand sqlCommand =null;
 
-                //SELECT * FROM [Students] WHERE Id=1
+                    //SELECT * FROM [Students] WHERE Id=1
 
-                switch (command.Split(' ')[0].ToLower())
-                {
-                    case "select":
-                        sqlCommand = new SqlCommand(command, sqlConnection);
-                        sqlDataReader = sqlCommand.ExecuteReader();
+                string[] commandArray = command.ToLower().Split(' ');
 
-                        while (sqlDataReader.Read())
-                        {
-                            Console.WriteLine($"{sqlDataReader["Id"]}" +
-                                              $"{sqlDataReader["FIO"]}" +
-                                              $"{sqlDataReader["Birthday"]}" +
-                                              $"{sqlDataReader["University"]}" +
-                                              $"{sqlDataReader["Group_number"]}" +
-                                              $"{sqlDataReader["Average_score"]}" 
-                                              );
-                            Console.WriteLine(new string('-', 30));
-                        }
+                switch (commandArray[0])
+                    {
+                        case "selectall":
+                            sqlCommand = new SqlCommand("SELECT * FROM [Students]", sqlConnection);
+                            sqlDataReader = sqlCommand.ExecuteReader();
 
-                        if(sqlDataReader != null)
-                        {
-                            sqlDataReader.Close();
-                        }
+                            while (sqlDataReader.Read())
+                            {
+                                Console.WriteLine($"{sqlDataReader["Id"]}" +
+                                                  $"{sqlDataReader["FIO"]}" +
+                                                  $"{sqlDataReader["Birthday"]}" +
+                                                  $"{sqlDataReader["University"]}" +
+                                                  $"{sqlDataReader["Group_number"]}" +
+                                                  $"{sqlDataReader["Average_score"]}"
+                                                  );
+                                Console.WriteLine(new string('-', 30));
+                            }
 
-                        break;
-
-                    case "insert":
+                            if (sqlDataReader != null)
+                            {
+                                sqlDataReader.Close();
+                            }
+                            break;
+                        case "select":
                             sqlCommand = new SqlCommand(command, sqlConnection);
-                            Console.WriteLine($"Добавлено: {sqlCommand.ExecuteNonQuery()} строк(а)");
+                            sqlDataReader = sqlCommand.ExecuteReader();
 
-                        break;
-                    case "update":
-                            sqlCommand = new SqlCommand(command, sqlConnection);
-                            Console.WriteLine($"Изменено: {sqlCommand.ExecuteNonQuery()} строк(а)");
+                            while (sqlDataReader.Read())
+                            {
+                                Console.WriteLine($"{sqlDataReader["Id"]}" +
+                                                  $"{sqlDataReader["FIO"]}" +
+                                                  $"{sqlDataReader["Birthday"]}" +
+                                                  $"{sqlDataReader["University"]}" +
+                                                  $"{sqlDataReader["Group_number"]}" +
+                                                  $"{sqlDataReader["Average_score"]}" 
+                                                  );
+                                Console.WriteLine(new string('-', 30));
+                            }
 
-                        break;
-                    case "delete":
-                            sqlCommand = new SqlCommand(command, sqlConnection);
-                            Console.WriteLine($"Удалено: {sqlCommand.ExecuteNonQuery()} строк(а)");
+                            if(sqlDataReader != null)
+                            {
+                                sqlDataReader.Close();
+                            }
 
-                        break;
-                    default:
-                        Console.WriteLine($"Команда {command} некорректна!");
-                        break;
+                            break;
+
+                        case "insert":
+                                sqlCommand = new SqlCommand(command, sqlConnection);
+                                Console.WriteLine($"Добавлено: {sqlCommand.ExecuteNonQuery()} строк(а)");
+
+                            break;
+                        case "update":
+                                sqlCommand = new SqlCommand(command, sqlConnection);
+                                Console.WriteLine($"Изменено: {sqlCommand.ExecuteNonQuery()} строк(а)");
+
+                            break;
+                        case "delete":
+                                sqlCommand = new SqlCommand(command, sqlConnection);
+                                Console.WriteLine($"Удалено: {sqlCommand.ExecuteNonQuery()} строк(а)");
+                    
+                            break;
+                        case "sortby":
+                                //sortby fio asc
+
+                                sqlCommand = new SqlCommand($"SELECT * FROM [Students] ORDER BY {commandArray[1]} {commandArray[2]}", sqlConnection);
+
+                                sqlDataReader = sqlCommand.ExecuteReader();
+
+                                while (sqlDataReader.Read())
+                                {
+                                    Console.WriteLine($"{sqlDataReader["Id"]}" +
+                                                      $"{sqlDataReader["FIO"]}" +
+                                                      $"{sqlDataReader["Birthday"]}" +
+                                                      $"{sqlDataReader["University"]}" +
+                                                      $"{sqlDataReader["Group_number"]}" +
+                                                      $"{sqlDataReader["Average_score"]}"
+                                                      );
+                                    Console.WriteLine(new string('-', 30));
+                                }
+
+                                if (sqlDataReader != null)
+                                {
+                                    sqlDataReader.Close();
+                                }
+
+                                break;
+                        default:
+                            Console.WriteLine($"Команда {command} некорректна!");
+                            break;
 
                 }
                 }

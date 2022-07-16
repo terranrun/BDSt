@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\esto0\\source\\repos\\BaseDDT\\BaseDDT\\BaseDDT.csproj": {}
+    "C:\\Users\\esto0\\Documents\\BDSt\\BaseDDT\\BaseDDT\\BaseDDT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\esto0\\source\\repos\\BaseDDT\\BaseDDT\\BaseDDT.csproj": {
+    "C:\\Users\\esto0\\Documents\\BDSt\\BaseDDT\\BaseDDT\\BaseDDT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\esto0\\source\\repos\\BaseDDT\\BaseDDT\\BaseDDT.csproj",
+        "projectUniqueName": "C:\\Users\\esto0\\Documents\\BDSt\\BaseDDT\\BaseDDT\\BaseDDT.csproj",
         "projectName": "BaseDDT",
-        "projectPath": "C:\\Users\\esto0\\source\\repos\\BaseDDT\\BaseDDT\\BaseDDT.csproj",
+        "projectPath": "C:\\Users\\esto0\\Documents\\BDSt\\BaseDDT\\BaseDDT\\BaseDDT.csproj",
         "packagesPath": "C:\\Users\\esto0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\esto0\\source\\repos\\BaseDDT\\BaseDDT\\obj\\",
+        "outputPath": "C:\\Users\\esto0\\Documents\\BDSt\\BaseDDT\\BaseDDT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\esto0\\AppData\\Roaming\\NuGet\\NuGet.Config",
